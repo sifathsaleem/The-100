@@ -26,7 +26,7 @@ body {
 }
 
 .content h1 {
-  font-size: 80px;
+  font-size: 4px;
   font-weight: 600;
   transition: 0.5s;
 
@@ -73,7 +73,7 @@ body {
 
 @media screen and (min-width: 567px) {
   .content h1 {
-    font-size: 130px;
+    font-size: 120px;
   }
 
   .content a {
@@ -84,6 +84,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .content h1 {
-    font-size: 150px;
+    font-size: 120px;
   }
 }

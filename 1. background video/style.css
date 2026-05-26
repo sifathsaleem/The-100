@@ -1,14 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  font-family: "Bricolage Grotesque 14pt Medium";
-}
-
 .hero {
   width: 100%;
   height: 100vh;
@@ -26,7 +15,7 @@ body {
 }
 
 .content h1 {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 600;
   transition: 0.5s;
 
@@ -55,9 +44,13 @@ body {
   z-index: -1;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media (min-aspect-ratio: 16/9) {
+
+/* @media (min-aspect-ratio: 16/9) {
   .hero > .bg-video {
     width: 100%;
     height: auto;
@@ -69,11 +62,11 @@ body {
     width: auto;
     height: 100%;
   }
-}
+} */
 
-@media screen and (min-width: 567px) {
+@media screen and (min-width: 576px) {
   .content h1 {
-    font-size: 130px;
+    font-size: 60px;
   }
 
   .content a {
@@ -84,6 +77,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .content h1 {
-    font-size: 150px;
+    font-size: 80px;
   }
 }

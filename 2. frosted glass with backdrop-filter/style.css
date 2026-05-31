@@ -4,44 +4,52 @@ body {
   place-items: center;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 2rem;
+
+.wrapper{
+  flex: 1;
+  display: grid;
+  place-items: center;
 }
 
-.hero > h1 {
-    color: #fff;
-    font-size: 80px;
+.element > h1 {
+  color: #fff;
+  font-size: 80px;
 }
 
 header {
   width: 100%;
   height: 100px;
-  /* background: rgba(255, 255, 255, 0.3); */
   z-index: 2;
   position: relative;
-  outline: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .backdrop {
   position: absolute;
   inset: 0;
   height: 200%;
-  backdrop-filter: blur(16px);
-  mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+  backdrop-filter: blur(20px);
+  /* mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%); */
+  pointer-events: none;
+  background: linear-gradient(to bottom, hsl(0deg 0% 0%) 0%, transparent 50%);
+  mask-image: url(#frostyGlassMask);
 }
 
-.ball {
+  .svg-mask {
+    position: absolute;
+    inset: 0;
+  }
+
+.ball-container {
+  display: flex;
+  justify-content: center;
+}
+
+.ball-container > .ball {
   width: 150px;
   height: 150px;
-  background: #62f700;
+  background: #ffbf00;
   border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  cursor: move;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -50,7 +58,7 @@ header {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px); /* Moves up */
+    transform: translateY(-30px); /* Moves up */
   }
   100% {
     transform: translateY(0px); /* Returns to original position */

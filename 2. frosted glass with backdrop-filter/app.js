@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
-    $(".ball").dragable()
-
+    const ball = $(".ball")
 
 });
+
+
+
